@@ -7,8 +7,9 @@
 		<div>
 			<h3>{{ project.name }}</h3>
 			<h5>{{ project.targetAmount|number_format('2', '.', ',') }}</h5>
+			<h5>Date fin: {{ project.expiredOn|date('d/m/Y') }}</h5>
 			<p>
-				{{ project.description|truncate(5) }}
+				{{ project.description|truncate(5, true) }}
 		    </p>
 
 		</div>
