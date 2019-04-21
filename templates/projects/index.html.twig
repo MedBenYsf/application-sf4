@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>{{ projects|length }} projets </h1>
+
+	{% for project in projects %}
+		<div>
+			<h3>{{ project.name }}</h3>
+			<h5>{{ project.targetAmount|number_format('2', '.', ',') }}</h5>
+			<p>
+				{{ project.description|truncate(5) }}
+		    </p>
+
+		</div>
+		<hr/>
+	{% endfor %}
+
+	<div class="pagerfanta">
+    	{{ pagerfanta(projects, 'default', { 'omitFirstPage': true }) }}
+	</div>
+{% endblock %}
+
+
+
+
+

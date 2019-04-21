@@ -1,0 +1,5 @@
+App\Entity\Project:
+    project_{1..10}:
+        name: '<name()>'
+        description: '<paragraph(3)>'
+        targetAmount: '<randomNumber(4)>'
