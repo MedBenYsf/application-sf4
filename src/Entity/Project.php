@@ -108,4 +108,12 @@ class Project
         return $this;
     }
 
+    /**
+     * @return bool
+     */
+    public function isExpired()
+    {
+        return $this->expiredOn < new \DateTime();
+    }
+
 }
