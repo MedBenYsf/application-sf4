@@ -21,10 +21,9 @@ class ProjectRepository extends ServiceEntityRepository
         parent::__construct($registry, Project::class);
     }
 
-     /**
-      * @return Project[] Returns an array of Project objects
-      */
-    
+    /**
+     * @return Project[] Returns an array of Project objects
+     */
     public function getProjects(int $page)
     {
         $qb = $this->createQueryBuilder('p')
@@ -34,9 +33,7 @@ class ProjectRepository extends ServiceEntityRepository
         $pagerfanta->setCurrentPage($page);
 
         return $pagerfanta;
-
     }
-    
 
     /*
     public function findOneBySomeField($value): ?Project

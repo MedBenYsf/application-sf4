@@ -115,5 +115,4 @@ class Project
     {
         return $this->expiredOn < new \DateTime();
     }
-
 }
