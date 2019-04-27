@@ -14,9 +14,8 @@ class ProjectsController extends AbstractController
     /**
      * @Route("/projets", name="projets_index")
      */
-    public function index(Request $request, CacheInterface $cache, ProjectRepository $projectRepo){
-
-
+    public function index(Request $request, CacheInterface $cache, ProjectRepository $projectRepo)
+    {
         $page = $request->query->get('page', 1);
         $key = 'demo';
         $demo = $cache->get($key, function (ItemInterface $item) {
