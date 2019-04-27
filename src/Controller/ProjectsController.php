@@ -20,7 +20,7 @@ class ProjectsController extends AbstractController
         $key = 'demo';
         $demo = $cache->get($key, function (ItemInterface $item) {
             return 'demo';
-        });
+        })
 
         $projects = $projectRepo->getProjects($page);
 
